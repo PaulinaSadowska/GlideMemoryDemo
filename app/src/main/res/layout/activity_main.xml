@@ -17,6 +17,11 @@
         style="@style/textButton" />
 
     <TextView
+        android:id="@+id/buttonOverlaySize"
+        android:text="@string/overlay_size"
+        style="@style/textButton" />
+
+    <TextView
         android:id="@+id/buttonActivityStack"
         android:text="@string/image_activities"
         style="@style/textButton" />

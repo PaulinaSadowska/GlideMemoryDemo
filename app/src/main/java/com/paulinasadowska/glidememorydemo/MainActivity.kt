@@ -7,6 +7,7 @@ import com.paulinasadowska.glidememorydemo.image.ImageActivity
 import com.paulinasadowska.glidememorydemo.pager.ViewPagerActivity
 import com.paulinasadowska.glidememorydemo.recycler.RecyclerViewActivity
 import com.paulinasadowska.glidememorydemo.size.BitmapSizeActivity
+import com.paulinasadowska.glidememorydemo.size.GrayOverlayActivity
 import com.paulinasadowska.glidememorydemo.size.SmallBitmapSizeActivity
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlin.reflect.KClass
@@ -22,6 +23,9 @@ class MainActivity : AppCompatActivity() {
         }
         buttonSmallBitmapSize.setOnClickListener {
             startActivity(SmallBitmapSizeActivity::class)
+        }
+        buttonOverlaySize.setOnClickListener {
+            startActivity(GrayOverlayActivity::class)
         }
         buttonActivityStack.setOnClickListener {
             startActivity(ImageActivity::class)

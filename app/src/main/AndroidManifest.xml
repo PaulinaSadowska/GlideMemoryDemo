@@ -30,6 +30,8 @@
         <activity android:name=".pager.ViewPagerActivity" />
         <activity android:name=".size.BitmapSizeActivity" />
         <activity android:name=".size.SmallBitmapSizeActivity" />
+
+        <activity android:name=".size.GrayOverlayActivity" />
     </application>
 
 </manifest>
