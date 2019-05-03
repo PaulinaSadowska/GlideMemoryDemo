@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/buttonBitmapSize"
+        android:text="@string/bitmap_sizes"
+        style="@style/textButton" />
+
+    <TextView
+        android:id="@+id/buttonSmallBitmapSize"
+        android:text="@string/bitmap_sizes_small"
+        style="@style/textButton" />
+
+    <TextView
+        android:id="@+id/buttonActivityStack"
+        android:text="@string/image_activities"
+        style="@style/textButton" />
+
+    <TextView
+        android:id="@+id/buttonRecyclerView"
+        android:text="@string/recycler_view"
+        style="@style/textButton" />
+
+    <TextView
+        android:id="@+id/buttonViewPager"
+        android:text="@string/view_pager"
+        style="@style/textButton" />
+
+</LinearLayout>
