@@ -1,13 +1,11 @@
-package com.paulinasadowska.glidememorydemo.size
+package com.paulinasadowska.glidememorydemo.logging
 
-import android.graphics.drawable.BitmapDrawable
 import android.graphics.drawable.Drawable
-import android.util.Log
-import android.widget.TextView
 import com.bumptech.glide.load.DataSource
 import com.bumptech.glide.load.engine.GlideException
 import com.bumptech.glide.request.RequestListener
 import com.bumptech.glide.request.target.Target
+import com.paulinasadowska.glidememorydemo.logging.logMessage
 
 class DrawableSizeLoggerListener(private val logReadyListener: (log: String) -> Unit) : RequestListener<Drawable> {
 
@@ -16,18 +14,8 @@ class DrawableSizeLoggerListener(private val logReadyListener: (log: String) -> 
     }
 
     override fun onResourceReady(resource: Drawable?, model: Any?, target: Target<Drawable>?, dataSource: DataSource?, isFirstResource: Boolean): Boolean {
-        if (resource is BitmapDrawable) {
-            with(resource.bitmap) {
-                val mbSize = String.format("%.2f", byteCount / 1048576.0)
-                logReadyListener("$byteCount bytes ($mbSize Mb, size: $width x $height")
-            }
-        }
+        logReadyListener(resource.logMessage())
         return false
     }
 }
 
-fun String.logAndSetText(textView: TextView, name: String) {
-    val log = "$name:\n$this"
-    textView.text = log
-    Log.d("GlideSize", log)
-}

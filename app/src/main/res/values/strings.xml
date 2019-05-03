@@ -7,4 +7,5 @@
     <string name="bitmap_sizes">Bitmap sizes</string>
     <string name="bitmap_sizes_small">Small bitmap sizes</string>
     <string name="overlay_size">Overlay sizes</string>
+    <string name="targets">Targets</string>
 </resources>

@@ -22,6 +22,11 @@
         style="@style/textButton" />
 
     <TextView
+        android:id="@+id/buttonTargets"
+        android:text="@string/targets"
+        style="@style/textButton" />
+
+    <TextView
         android:id="@+id/buttonActivityStack"
         android:text="@string/image_activities"
         style="@style/textButton" />

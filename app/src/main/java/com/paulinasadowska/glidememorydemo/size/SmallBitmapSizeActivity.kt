@@ -5,6 +5,8 @@ import android.support.v7.app.AppCompatActivity
 import com.bumptech.glide.Glide
 import com.bumptech.glide.load.resource.bitmap.DownsampleStrategy
 import com.paulinasadowska.glidememorydemo.R
+import com.paulinasadowska.glidememorydemo.logging.DrawableSizeLoggerListener
+import com.paulinasadowska.glidememorydemo.logging.logAndSetText
 import kotlinx.android.synthetic.main.activity_images_small.*
 
 class SmallBitmapSizeActivity : AppCompatActivity() {

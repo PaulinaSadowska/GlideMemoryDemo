@@ -32,6 +32,8 @@
         <activity android:name=".size.SmallBitmapSizeActivity" />
 
         <activity android:name=".size.GrayOverlayActivity" />
+
+        <activity android:name=".targets.TargetActivity"/>
     </application>
 
 </manifest>
