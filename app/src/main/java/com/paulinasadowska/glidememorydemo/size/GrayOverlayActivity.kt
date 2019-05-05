@@ -15,6 +15,7 @@ import kotlinx.android.synthetic.main.activity_overlay.*
  * creating Bitmap by hand (overall memory: 12.1MB, Bitmap 1.84MB)
  * using Glide: (overall 14.8Mb, Bitmap: 1.84MB (extra is probably for cache), BitmapDrawable (downsample etc. doesn't change anything)
  * using setImageResource (overall: 10.1MB, GradientDrawable created, 480bytes(??))
+ * TODO - powtórz pomiary bez cache i bitmap pool
  */
 
 

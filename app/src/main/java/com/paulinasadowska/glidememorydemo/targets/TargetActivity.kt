@@ -77,7 +77,10 @@ class TargetActivity : AppCompatActivity() {
                     .load(IMAGE_URL)
                     .into(object : CustomTarget<Drawable>(image4.width, 1) {
                         override fun onLoadCleared(placeholder: Drawable?) {
-                            // do nothing
+                            // this is called when imageView is cleared on lifecycle call or for
+                            // some other reason.
+                            // if you are referencing the bitmap somewhere else too other than this imageView
+                            // clear it here as you can no longer have the bitmap
                         }
 
                         override fun onResourceReady(resource: Drawable, transition: Transition<in Drawable>?) {

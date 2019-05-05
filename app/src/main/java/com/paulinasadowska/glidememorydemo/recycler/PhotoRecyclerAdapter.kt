@@ -1,13 +1,15 @@
 package com.paulinasadowska.glidememorydemo.recycler
 
+import android.content.Context
 import android.support.v7.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import android.widget.ImageView
+import com.bumptech.glide.Glide
 import com.bumptech.glide.RequestManager
 import com.paulinasadowska.glidememorydemo.R
 
-class PhotoRecyclerAdapter(private val request: RequestManager) : RecyclerView.Adapter<PhotoRecyclerAdapter.MyViewHolder>() {
+class PhotoRecyclerAdapter(private val context: Context) : RecyclerView.Adapter<PhotoRecyclerAdapter.MyViewHolder>() {
 
     private val images = listOf(
             "https://picsum.photos/2000/3000?image=0",
@@ -64,7 +66,8 @@ class PhotoRecyclerAdapter(private val request: RequestManager) : RecyclerView.A
     }
 
     override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
-        request.load(images[position])
+        Glide.with(context)
+                .load(images[position])
                 //.skipMemoryCache(true)
                 .into(holder.imageView)
     }
